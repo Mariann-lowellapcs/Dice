@@ -1,14 +1,23 @@
 Die bob;
 
+
 void setup()
 {
   size(300,300);
   noLoop();
 }
 void draw()
+
 {
-  Die bob = new Die(0,0);
-  bob.show();
+  for(int y = 0; y <= 450; y += 50)
+  {
+    for (int x = 0; x <= 450; x += 50)
+    {
+Die bob = new Die(x,y);
+bob.show();
+    }
+  }
+
 }
 
 void mousePressed()
@@ -93,5 +102,3 @@ class Die //models one single dice cube
     ellipse(39,28,10,10);
     } 
   }
-}
-
