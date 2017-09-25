@@ -1,5 +1,5 @@
 Die bob;
-
+int num;
 void setup()
 {
   size(500,500);
@@ -8,7 +8,9 @@ void setup()
 void draw()
 
 {
+  
    background((int)(Math.random()*200));
+   num =0;
 int m,g; 
 for(m =50; m<450; m =m+100)
 {
@@ -17,11 +19,14 @@ for(m =50; m<450; m =m+100)
 Die bob=new Die(m,g);
 bob.roll();
 bob.show();
+  }
+}
+textSize(40);
+fill(255,255,0);
+text(num,210,250);
 
+}
 
-}
-}
-}
 void mousePressed()
 {
    
@@ -52,6 +57,7 @@ class Die //models one single dice cube
       
      fill(0);
     ellipse(myX+60,myY+40,10,10);
+    num = num +1;
     }
     else if (Diedot ==2)
     {
@@ -60,6 +66,7 @@ class Die //models one single dice cube
     ellipse(myX+60,myY+20,10,10);
     fill(0);
     ellipse(myY+20,myY+60,10,10);
+    num= num+2;
     }
     else if (Diedot == 3)
     {
@@ -70,6 +77,7 @@ class Die //models one single dice cube
     ellipse(myX+60,myY+20,10,10);
     fill(0);
     ellipse(myX+20,myY+60,10,10);
+    num=num+3;
     }
     else if (Diedot == 4)
     {fill(0);
@@ -80,6 +88,7 @@ class Die //models one single dice cube
     ellipse(myX+60,myY+20,10,10);
     fill(0);
     ellipse(myX+20,myY+60,10,10);
+    num=num+4;
     }
     else if (Diedot ==5)
     {
@@ -95,6 +104,7 @@ class Die //models one single dice cube
     ellipse(myX+60,myY+20,10,10);
     fill(0);
     ellipse(myX+20,myY+60,10,10);
+    num=num+5;
     }
     else if (Diedot ==6)
     {
@@ -110,6 +120,7 @@ class Die //models one single dice cube
     ellipse(myX+60,myY+20,10,10);
     fill(0);
     ellipse(myX+20,myY+60,10,10);
+    num=num+6;
     }
     
     } 
